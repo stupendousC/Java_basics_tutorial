@@ -1,0 +1,55 @@
+{
+  "configurations": [
+    {
+      "type": "java",
+      "name": "CodeLens (Launch) - App",
+      "request": "launch",
+      "mainClass": "app.App",
+      "projectName": "src_4869de23"
+    },
+    {
+      "name": "Debug Open Ruby File",
+      "type": "Ruby",
+      "request": "launch",
+      "cwd": "${workspaceRoot}",
+      "program": "${file}"
+    },
+    {
+      "name": "Debug Ruby Test File",
+      "type": "Ruby",
+      "request": "launch",
+      "cwd": "${workspaceRoot}",
+      "program": "${file}",
+      "includes": [
+        "test",
+        "lib"
+      ]
+    },
+    {
+      "name": "Debug Highlighted Ruby Test",
+      "type": "Ruby",
+      "request": "launch",
+      "cwd": "${workspaceRoot}",
+      "program": "${file}",
+      "args": [
+        "-n",
+        "/test_[0-9]{4}_${selectedText}/"
+      ]
+    },
+    {
+      "name": "Debug Rails server",
+      "type": "Ruby",
+      "request": "launch",
+      "cwd": "${workspaceRoot}",
+      "useBundler": true,
+      "pathToBundler": "/Users/carolinewu/.rbenv/shims/bundle",
+      "pathToRDebugIDE": "/Users/carolinewu/.rbenv/versions/2.5.5/lib/ruby/gems/2.5.0/gems/ruby-debug-ide-0.7.0",
+      "program": "${workspaceRoot}/bin/rails",
+      "args": [
+        "server",
+        "-p",
+        "3000"
+      ]
+    }
+  ]
+}
